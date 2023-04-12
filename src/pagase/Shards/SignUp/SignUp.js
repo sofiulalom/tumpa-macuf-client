@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import ContinewGoogle from './ContinewGoogle/ContinewGoogle';
 
 const SignUp = () => {
        const {createUser}=useContext(AuthContext)
@@ -46,6 +47,7 @@ const SignUp = () => {
               <input className='btn btn-primary mt-2 w-72' type="submit" value='Sign-Up' />
               <div className="flex flex-col w-72 border-opacity-50">
                 <div className="divider">OR</div>
+                <ContinewGoogle></ContinewGoogle>
                 
               </div>
                 </form>

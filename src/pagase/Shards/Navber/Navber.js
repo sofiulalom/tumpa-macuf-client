@@ -1,12 +1,36 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Navber = () => {
+    const {user, LogOut}=useContext(AuthContext)
+    const handleLogOut =()=> {
+        LogOut()
+        .then(()=> {})
+        .catch(er => {
+            console.error(er)
+        })
+    }
     const manuItems=<>
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/'>service</Link></li>
     <li><Link to='/'>About</Link></li>
-    <li><Link to='/login'>Login</Link></li>
+    {user?.uid ?
+        <> 
+        
+        
+        <button className='btn btn-primary max-w-sm' onClick={handleLogOut}>LogOut</button>
+        
+        </>
+        :
+       <>
+        <li><Link to='/login'>Login</Link></li>
+        <li><Link to='/signup'>Sign-Up</Link></li>
+
+       
+       
+       </>}
+
     </>
     return (
         <div className="navbar bg-gray-600">

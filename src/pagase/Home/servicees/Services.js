@@ -40,6 +40,7 @@ const Services = () => {
                     ></Service>)
                 }
             </div>
+           <button className='btn btn-secondary mt-8'>Expore more</button>
         </div>
        </section>
     );

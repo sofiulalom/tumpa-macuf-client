@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import logo from '../../../assets/logo.png'
 
 const Navber = () => {
     const {user, LogOut}=useContext(AuthContext)
@@ -12,14 +13,14 @@ const Navber = () => {
         })
     }
     const manuItems=<>
-    <li><Link to='/'>Home</Link></li>
+    <li><Link  to='/'>Home</Link></li>
     <li><Link to='/'>service</Link></li>
     <li><Link to='/'>About</Link></li>
     {user?.uid ?
         <> 
         
         
-        <button className='btn btn-primary max-w-sm' onClick={handleLogOut}>LogOut</button>
+        <button className='btn btn-secondary max-w-sm' onClick={handleLogOut}>LogOut</button>
         
         </>
         :
@@ -33,7 +34,7 @@ const Navber = () => {
 
     </>
     return (
-        <div className="navbar bg-gray-600">
+        <div className="navbar bg-orange-50 py-8">
         <div className="navbar-start">
             <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -43,7 +44,10 @@ const Navber = () => {
               {manuItems}
             </ul>
             </div>
-            <Link className="btn btn-ghost normal-case text-xl">daisyUI</Link>
+            <div className='ml-20'>
+                <img src={logo} className='w-32' alt="" />
+            </div>
+               
         </div>
         <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">

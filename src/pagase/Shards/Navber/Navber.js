@@ -14,7 +14,7 @@ const Navber = () => {
     }
     const manuItems=<>
     <li><Link  to='/'>Home</Link></li>
-    <li><Link to='/'>service</Link></li>
+    <li><Link to='/services'>service</Link></li>
     <li><Link to='/'>About</Link></li>
     {user?.uid ?
         <> 

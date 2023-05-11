@@ -1,5 +1,6 @@
 import {createBrowserRouter} from 'react-router-dom'
 import Home from '../../../../pagase/Home/Home/Home'
+import ApoinmentServices from '../../../../pagase/Shards/apoinmentServices/ApoinmentServices'
 import Login from '../../../../pagase/Shards/Login/Login'
 import SignUp from '../../../../pagase/Shards/SignUp/SignUp'
 import Main from '../../Main'
@@ -18,6 +19,10 @@ export const router =createBrowserRouter([
             {
                 path:'/signup',
                 element: <SignUp></SignUp>
+            },
+            {
+                path:'/services',
+                element:<ApoinmentServices></ApoinmentServices>
             },
     ]
     },

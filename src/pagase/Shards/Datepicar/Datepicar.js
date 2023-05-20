@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
-import { format } from 'date-fns';
+import React from 'react';
 import { DayPicker } from 'react-day-picker';
 
-const Datepicar = () => {
-    const [selected, setSelected] =useState(new Date());
+const Datepicar = ({selected,setSelected}) => {
+    
     return (
-        <div>
+      <div>
+        
+        <div className='shadow-xl'>
             <DayPicker 
             mode='single'
             selected={selected}
             onSelect={setSelected}
             />
-            <p>You picked {format(selected, 'PP')}.</p>
             
+            
+        </div>
         </div>
     );
 };

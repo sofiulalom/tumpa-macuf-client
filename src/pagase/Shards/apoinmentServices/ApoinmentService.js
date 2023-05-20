@@ -1,16 +1,21 @@
 import React from 'react';
 
-const ApoinmentService = ({service}) => {
-    const {name, price, description}=service;
+const ApoinmentService = ({apoinmenoption,setTrithment}) => {
+    const {name, slots}=apoinmenoption;
     return (
         <div className="card w-80 ml-12 shadow-xl  text-black">
         <div className="card-body">
-          <h2 className=" text-secondary text-center">{name} </h2>
+          <h2 className=" text-secondary text-center font-bold">{name} </h2>
           
-          <p> {description} </p>
-          <p><small className='text-orange-600'>price: ${price}</small></p>
+         
+          <p>{slots.length > 0 ? slots[0] : 'Try another day' }</p>
+          <p>{slots.length} {slots.length > 1 ? 'spaces': 'space' } abaleabale</p>
           <div className="card-actions justify-center">
-            <button className="btn btn-secondary btn-sm">Buy Now</button>
+            <label
+            htmlFor="BookMarkModal"
+            className="btn btn-secondary btn-sm text-white"
+          onClick={()=> setTrithment (apoinmenoption)}
+            >booking now</label>
           </div>
         </div>
       </div>

@@ -12,6 +12,7 @@ const ApoinmentService = ({apoinmenoption,setTrithment}) => {
           <p>{slots.length} {slots.length > 1 ? 'spaces': 'space' } abaleabale</p>
           <div className="card-actions justify-center">
             <label
+            disabled={slots.length === 0}
             htmlFor="BookMarkModal"
             className="btn btn-secondary btn-sm text-white"
           onClick={()=> setTrithment (apoinmenoption)}

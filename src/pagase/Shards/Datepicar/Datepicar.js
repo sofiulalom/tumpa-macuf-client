@@ -4,9 +4,9 @@ import { DayPicker } from 'react-day-picker';
 const Datepicar = ({selected,setSelected}) => {
     
     return (
-      <div>
+      
         
-        <div className='shadow-xl'>
+        <div className='shadow-xl '>
             <DayPicker 
             mode='single'
             selected={selected}
@@ -15,7 +15,7 @@ const Datepicar = ({selected,setSelected}) => {
             
             
         </div>
-        </div>
+        
     );
 };
 
